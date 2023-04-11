@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Page Title -->
+    <title>tfQuickstart || Quickstart for Themeforest HTML Template</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <!-- Web Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,800,900&display=swap"
+    />
+
+<style>
+html {
+  box-sizing: border-box;
+  background: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Heiti TC", 微軟正黑體, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.nav-dots {
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #52616a;
+  border-radius: 50%;
+  list-style: none;
+  background: #c9d6de;
+  transition: all 0.3s;
+}
+.nav-dot:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.nav-dot:hover, .nav-dot.is-active {
+  transform: scale(1.8);
+  background: transparent;
+}
+.section {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+.section:nth-of-type(1) {
+  background-color: #a5d296;
+}
+.section:nth-of-type(2) {
+  background-color: #47b8e0;
+}
+.section:nth-of-type(3) {
+  background-color: #ffc952;
+}
+.section:nth-of-type(4) {
+  background-color: #ff7473;
+}
+.section__heading {
+  margin: 0;
+  color: white;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+ .full-new-wrppaer{
+
+
+  height: 100vh;
+  overflow: auto;
+ }
+</style>
+  </head>
+
+  <body>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9.1.1/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.1.1/modules/scrollbar/scrollbar.min.css">
+    <div id="swiper-container">
+
+
+  <div class="container full-new-wrppaer">
+
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <h1>this is goo on </h1>
+
+
+      </div>
+
+  <div class="col-8">
+
+
+    <ul class="nav-dots" id="js-dots">
+      <li class="nav-dot"></li>
+      <li class="nav-dot"></li>
+      <li class="nav-dot"></li>
+      <li class="nav-dot"></li>
+    </ul>
+    
+    <main class="main" id="myDiv">
+ 
+       
+         <section class="section">
+        <h2 class="section__heading">Scroll up and down</h2>
+      </section>
+      <section class="section">
+        <h2 class="section__heading">Click on the nav dots</h2>
+      </section>
+      <section class="section">
+        <h2 class="section__heading">Smooth scrolling</h2>
+      </section>
+      <section class="section">
+        <h2 class="section__heading">Well done!</h2>
+      </section>
+       
+    </main>
+    
+    
+  </div>
+ 
+ 
+    </div>
+
+
+      
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-12">
+
+      
+
+ 
+
+
+
+
+
+
+
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+  <h1>this is goo on </h1>
+
+  <h1>this is goo on </h1>
+    </div>
+  </div>
+</div>
+
+
+
+    <script>
+class Slider {
+  constructor(options) {
+    this.sections = document.querySelectorAll(options.section);
+    this.navigation = document.querySelector(options.dots);
+
+    this.navigation.addEventListener('click', this.scrollToSection.bind(this));
+    window.addEventListener('scroll', this.setDotStatus.bind(this));
+  }
+
+  removeDotStyles() {
+    const dots = this.navigation;
+    const is_active = dots.querySelector('.is-active');
+
+    if (is_active != null) {
+      is_active.classList.remove('is-active');
+    }
+  }
+
+  setDotStatus() {
+    const scroll_position = document.querySelector('#myDiv').scrollY;
+    const dots = Array.from(this.navigation.children);
+
+    this.sections.forEach((section, index) => {
+      const half_window = document.querySelector('#myDiv').innerHeight / 2;
+      const section_top = section.offsetTop;
+
+      if (scroll_position > section_top - half_window && scroll_position < section_top + half_window) {
+        this.removeDotStyles();
+        dots[index].classList.add('is-active');
+      }
+    })
+  }
+
+  scrollToSection(e) {
+    const dots = Array.from(this.navigation.children);
+    const window_height = document.querySelector('#myDiv').innerHeight;
+
+    dots.forEach((dot, index) => {
+      if (dot == e.target) {
+
+        document.querySelector('#myDiv').scrollTo({
+          top: window_height * index,
+          behavior: 'smooth',
+        });
+      }
+    });
+  }
+}
+
+new Slider({
+  section: '.section',
+  dots: '#js-dots',
+});
+      </script>
+    
+
+  </body>
+</html>

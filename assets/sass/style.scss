@@ -1,0 +1,363 @@
+// Responsive Mixin
+@mixin breakpoint($point) {
+  // 576 to Upper
+  @if $point == hhxsmall {
+    @media (min-width: 240px) and (max-width: 992px) {
+      @content;
+    }
+  }
+  // 576 to Upper
+  @if $point == xsmall {
+    @media (min-width: 250px) {
+      @content;
+    }
+  }
+  // 576 to Upper
+  @if $point == cxsmall {
+    @media (min-width: 200px) and (max-width: 300px) {
+      @content;
+    }
+  }
+
+  // 576 to Upper
+  @if $point == small {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  // 576 to Upper
+  @if $point == small-m {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+
+  // 768 to Upper
+  @if $point == medium {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  // 998 to Upper
+  @if $point == large {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  // 1200 to Upper
+  @if $point == xlarge {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  // 1400 to Upper
+  @if $point == xxlarge {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+
+  // 1800 to Upper
+  @if $point == xxxlarge {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+// ================express start here ===========
+
+.express-massage {
+  background-color: #000;
+}
+img {
+  max-width: 100%;
+}
+
+// ================icon with pop start here ===========
+
+.icon-with-modal {
+  margin: 20px 0;
+}
+
+
+
+
+
+
+
+p{
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+// new css start form here  
+
+.hero-main-image {
+  margin: 0 0 25px 0;
+  .singel-image {
+    height: 30vh;
+    text-align: center;
+    
+    @include breakpoint(small){
+      height: 40vh;
+    }
+    @include breakpoint(medium){
+      height: 50vh;
+    }
+    @include breakpoint(xlarge){
+      height: 60vh;
+    }
+    img{
+      height: 100%;display: inline-block;
+    }
+  }
+  ul.slick-dots {
+    display: none !important;
+}
+}
+.side-image {
+  .singel-image {
+    height: 125px;
+    margin: 0 5px;
+   border: 1px solid rgb(106, 106, 106);
+
+    img{
+      height: 100%;
+    }
+  }
+}
+.hero-main-image{
+  position: relative;
+
+.slick-custom-arrow{
+  position: absolute;
+
+  color: #fff;
+  font-size: 62px;
+  z-index: 100;
+  width: 300px;
+  height: 100%;
+ top: 0;
+ opacity: 0;
+}
+
+.slick-custom-arrow-right{
+  right: 0;
+  text-align: right;
+  img{
+    display: inline-block;
+   vertical-align: top;
+  }
+  &:hover{
+    opacity: 1;
+  cursor: pointer;
+  }
+}
+
+.slick-custom-arrow-left{
+  left: 0;
+  
+  img{
+  
+    display: inline-block;
+    vertical-align: top;
+  }
+  &:hover{
+    opacity: 1;
+  cursor: pointer;
+  }
+  
+}}
+
+.center-div-slide{
+  position: relative;
+  height: 100%;
+  img{
+    position: absolute !important;
+    top: 46%;
+    right:  0;
+  }
+}
+.center-div-slide-right{
+  position: relative;
+  height: 100%;
+  img{
+    position: absolute !important;
+    top: 46%;
+    left:  0;
+  }
+}
+
+
+
+
+.auto-play-silde{
+  img{
+    display: inline-block;
+  }
+  p{
+    margin-bottom: 0;
+    padding: 0;
+    display: inline-block;
+  }
+}
+.pause.mainaa{
+  display: none;
+}
+.play.mainaa{
+  display: none;
+}
+.singel-nav-wrapper{
+  position: relative;
+.thumbnail-wrapper{
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+ transition: 0.3s all ease-in-out;
+  z-index: 100;
+}}
+.thumbnail-wrapper:hover{
+  opacity: 1;
+
+}
+
+.left-arrow-image{
+  .pagingInfo{
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+}
+.pagingInfo{
+ 
+
+  @include breakpoint(xlarge){
+    margin: 0 8px;
+  }
+}
+
+
+
+
+// here is home page bannar start  
+.home-wrapper{
+  .home-logo-img{
+ display: inline-block;
+ text-align: center;
+  }
+  
+}
+
+
+.right-imag-slider-wrapper{
+  .singel-slide{
+    margin: 5px 0;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.contact-wrapper{
+  margin: 100px 0;
+  .contact-adress-wrapper{
+    .fulladress{
+      font-size: 22px;
+      line-height: 1.4;
+      color: #000;
+      font-weight: normal;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  
+}
+.contact-mobile,.contact-email{
+  margin: 8px 0;
+  span{
+   font-size: 20px;
+   text-transform: uppercase;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #999999;
+  }
+  p{
+   margin-bottom: 0;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #999999;
+  }
+   }
+
+   .contact-details{
+    font-size: 18px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-weight: bold;
+    color: #999;
+   }
+
+   .about-wrapper{
+    margin: 100px 0;
+    .about-left-image{
+
+    }
+    .about-middle-text-wrapper{
+      p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        line-height: 1.5;
+        font-size: 16px;
+        text-align: center;
+        @include breakpoint(medium){
+     
+          text-align: left
+        }
+      }
+    }
+   }
+
+   .about-left-man-image{
+    margin: 15px 0;
+    text-align: center;
+    @include breakpoint(medium){
+     
+      text-align: left
+    }
+    img{
+      display: inline-block;
+
+    }
+   }
+
+
+   .about-left-image{
+    margin: 15px 0;
+    text-align: center;
+    @include breakpoint(medium){
+     
+      text-align: left
+    }
+    img{
+      display: inline-block;
+       display: block;
+    }
+   }
+
+
+   .img{
+    display: block;
+   }
+   bool{
+    display: none;
+   }
