@@ -19,6 +19,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,800,900&display=swap"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="
+https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css
+" rel="stylesheet">
 <style>
 
 /** integration-section **/
@@ -69,42 +77,42 @@
   box-shadow: 0 23px 50px #d9d9e7;
 }
 
-.integration-section .integrations-block .icon-1{
+ .icon-1{
   left: 184px;
   top: -46px;
   -webkit-animation: zoom-fade 5s infinite linear;
   animation: zoom-fade 5s infinite linear;
 }
 
-.integration-section .integrations-block .icon-2{
+.icon-2{
   left: 70px;
   top: 32%;
   -webkit-animation: zoom-fade-two 5s infinite linear;
   animation: zoom-fade-two 5s infinite linear;
 }
 
-.integration-section .integrations-block .icon-3{
+.icon-3{
   right: 120px;
   top: 20%;
   -webkit-animation: zoom-fade-two 5s infinite linear;
   animation: zoom-fade-two 5s infinite linear;
 }
 
-.integration-section .integrations-block .icon-4{
+ .icon-4{
   left: 30px;
   bottom: 45px;
   -webkit-animation: zoom-fade 5s infinite linear;
   animation: zoom-fade 5s infinite linear;
 }
 
-.integration-section .integrations-block .icon-5{
+ .icon-5{
   right: 30%;
   bottom: 87px;
   -webkit-animation: zoom-fade-two 5s infinite linear;
   animation: zoom-fade-two 5s infinite linear;
 }
 
-.integration-section .integrations-block .icon-6{
+ .icon-6{
   right: -4%;
   bottom: 130px;
   -webkit-animation: zoom-fade 5s infinite linear;
@@ -117,7 +125,7 @@ img {
     height: auto;
 }
 
-.holderCircle { width: 700px; height: 700px; border-radius: 100%; margin: 60px auto; position: relative; }
+.holderCircle { width: 700px; height: 700px; border-radius: 100%;  position: relative; }
 
 
 .dotCircle { width: 100%; height: 100%; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; border-radius: 100%; z-index: 20; }
@@ -127,12 +135,15 @@ img {
 .dotCircle  .itemDot .forActive::before { content: ''; width: 6px; height: 6px; filter: blur(5px); top: -15px; position: absolute; transform: rotate(-45deg); border: 6px solid #a733bb; right: -39px; }
 .dotCircle  .itemDot.active .forActive { display: block; }
 .round { position: absolute; left: 40px; top: 45px; width: 610px; height: 610px; border: 2px dotted #a733bb; border-radius: 100%; -webkit-animation: rotation 100s infinite linear; }
-.dotCircle .itemDot:hover, .dotCircle .itemDot.active { color: #ffffff; transition: 0.5s;   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d4ac7+0,a733bb+100 */ background: #7d4ac7; /* Old browsers */ background: -moz-linear-gradient(left, #7d4ac7 0%, #a733bb 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #7d4ac7 0%, #a733bb 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #7d4ac7 0%, #a733bb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d4ac7', endColorstr='#a733bb', GradientType=1); /* IE6-9 */ border: 2px solid #ffffff; -webkit-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); -moz-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); }
+.dotCircle .itemDot:hover, .dotCircle .itemDot.active {
+   color: #ffffff; transition: 0.5s;   
+
+   border: 2px solid #7d4ac7; -webkit-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); -moz-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); }
 .dotCircle .itemDot { font-size: 40px; }
 .contentCircle { width: 250px; border-radius: 100%; color: #222222; position: relative; top: 150px; left: 50%; transform: translate(-50%, -50%); }
 .contentCircle .CirItem { border-radius: 100%; color: #222222; position: absolute; text-align: center; bottom: 0; left: 0; opacity: 0; transform: scale(0); transition: 0.5s; font-size: 15px; width: 100%; height: 100%; top: 0; right: 0; margin: auto; line-height: 250px; }
 .CirItem.active { z-index: 1; opacity: 1; transform: scale(1); transition: 0.5s; }
-.contentCircle .CirItem i { font-size: 180px; position: absolute; top: 0; left: 50%; margin-left: -90px; color: #000000; opacity: 0.1; }
+.contentCircle .CirItem img.nish { font-size: 180px; position: absolute; top: 0; left: 50%; margin-left: -90px; color: #000000; opacity: 0.1; }
 @media only screen and (min-width:300px) and (max-width:599px) {
 	.holderCircle {/* width: 300px; height: 300px;*/ margin: 110px auto; }
 	.holderCircle::after { width: 100%; height: 100%; }
@@ -190,13 +201,13 @@ img {
   </head>
 
   <body>
-    
-    <!-- <section class="integration-section">
+<!--     
+<section class="integration-section">
         
       <div class="container">
           <div class="row">
               <div class="col-lg-6 col-md-12 col-sm-12 integration-column offset-lg-3">
-                  <div class="integrations-block wow zoomIn animated animated" >
+                  <div class="integrations-block wow zoomIn animated animated" >  
                       <div class="icon-box">
                           <div class="icon icon-1"><a href="#"><img src="http://html.tonatheme.com/2019/Rivox/images/icons/icon-11.png" alt=""></a></div>
                           <div class="icon icon-2"><a href="#"><img src="http://html.tonatheme.com/2019/Rivox/images/icons/icon-12.png" alt=""></a></div>
@@ -210,7 +221,7 @@ img {
            
           </div>
       </div>
-  </section> -->
+  </section>   -->
 
 
 
@@ -222,40 +233,45 @@ img {
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!------ Include the above in your HEAD tag ---------->
-<section class="iq-features">
+<section class="iq-features wow animate__bounceInRight " >
 <div class="container">
 <div class="row align-items-center">
 <div class="col-lg-3 col-md-12"></div>
 <div class="col-lg-6 col-md-12">
  <div class="holderCircle">
 <div class="round"></div>
-<div class="round-1"></div>
-<div class="round-2"></div>
+
 <div class="dotCircle">
-<span class="itemDot active itemDot1" data-tab="1">
- <i class="fa fa-clock-o"></i>
+
+
+<div class="itemDot active itemDot1  icon-1" data-tab="1">
+ <img src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/WEBSITE_DESIGN_360x.png?v=1680197353" alt="">
  <span class="forActive"></span>
-</span>
-<span class="itemDot itemDot2" data-tab="2">
-<i class="fa fa-comments"></i>
+</div>
+
+
+<div class="itemDot itemDot2  icon-2" data-tab="2">
+<img src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/SOCIAL_MEDIA_360x.png?v=1680197821" alt="">
+
 <span class="forActive"></span>
-</span>
-<span class="itemDot itemDot3" data-tab="3">
-<i class="fa fa-user"></i>
+</div>
+<div class="itemDot itemDot3  icon-3" data-tab="3">
+ <img src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/BRAND_DESIGN_1_360x.png?v=1680198714" alt="">
 <span class="forActive"></span>
-</span>
-<span class="itemDot itemDot4" data-tab="4">
-<i class="fa fa-tags"></i>
+</div>
+<div class="itemDot itemDot4  icon-4" data-tab="4">
+ <img src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/SEARCH_ENGINE_OPTIMIZATION_360x.png?v=1680199096" alt="">
 <span class="forActive"></span>
-</span>
-<span class="itemDot itemDot5" data-tab="5">
- <i class="fa fa-upload"></i>
+</div>
+<div class="itemDot itemDot5  icon-5" data-tab="5">
+ <img src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/DIGITAL_MARKETING_v2_360x.png?v=1680199191" alt="">
 <span class="forActive"></span>
-</span>
-<span class="itemDot itemDot6" data-tab="6">
-<i class="fa fa-briefcase"></i>
+</div>
+<div class="itemDot itemDot6  icon-6" data-tab="6">
+ <img src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/CONTENT_WRITING_v2_360x.png?v=1680199456" alt="">
 <span class="forActive"></span>
-</span>
+</div>
+
 </div>
 
 
@@ -264,41 +280,50 @@ img {
 
 <div class="contentCircle">
 <div class="CirItem title-box active CirItem1">
-<h2 class="title"><span>Automate</span></h2>
-<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
-<i class="fa fa-clock-o"></i>
+<h2 class="title"><span>WEBSITE DESIGN</span></h2>
+<p>Our team provides custom website solutions for new or updated websites</p>
+
+<img class="nish" src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/WEBSITE_DESIGN_360x.png?v=1680197353" alt="">
 <img src="./assets/img/Transparent-02_120x.png" alt="">
 </div>
 <div class="CirItem title-box CirItem2">
-<h2 class="title"><span>Chat </span></h2>
-<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
-<i class="fa fa-comments"></i>
+<h2 class="title"><span>SOCIAL MEDIA </span></h2>
+<p>We provide social media marketing to help brands manage online presence.</p>
+
+<img class="nish" src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/SOCIAL_MEDIA_360x.png?v=1680197821" alt="">
+
 <img src="./assets/img/Transparent-02_120x.png" alt="">
 </div>
 <div class="CirItem title-box CirItem3">
-<h2 class="title"><span>Responses</span></h2>
-<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
-<i class="fa fa-user"></i>
+<h2 class="title"><span>BRAND DESIGN</span></h2>
+<p>Elevate your brand authority with our design packages ideal for businesses</p>
+<img class="nish" src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/BRAND_DESIGN_1_360x.png?v=1680198714" alt="">
+
 <img src="./assets/img/Transparent-02_120x.png" alt="">
 </div>
 <div class="CirItem title-box CirItem4">
-<h2 class="title"><span>Tags</span></h2>
-<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
-<i class="fa fa-tags"></i>
+<h2 class="title"><span>SEARCH ENGINE OPTIMIZATION</span></h2>
+<p>Enhance online presence with SEO to drive traffic, improve ranking on search engines.</p>
+<img class="nish" src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/SEARCH_ENGINE_OPTIMIZATION_360x.png?v=1680199096" alt="">
+
 <img src="./assets/img/Transparent-02_120x.png" alt="">
 </div>
 <div class="CirItem title-box CirItem5">
-<h2 class="title"><span>Sharing</span></h2>
-<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
-<i class="fa fa-upload"></i>
+<h2 class="title"><span>DIGITAL MARKETING</span></h2>
+<p>We use creative digital marketing solutions to increase revenue for clients.</p>
+<img class="nish" src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/DIGITAL_MARKETING_v2_360x.png?v=1680199191" alt="">
+
 <img src="./assets/img/Transparent-02_120x.png" alt="">
 </div>
 <div class="CirItem title-box CirItem6">
-<h2 class="title"><span>Support</span></h2>
-<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
-<i class="fa fa-briefcase"></i>
+<h2 class="title"><span>CONTENT WRITING</span></h2>
+<p>Compelling content produced by our writers and content marketing packages convert</p>
+<img class="nish" src="https://cdn.shopify.com/s/files/1/0054/8808/3030/files/CONTENT_WRITING_v2_360x.png?v=1680199456" alt="">
+
 <img src="./assets/img/Transparent-02_120x.png" alt="">
                            </div>
+
+
                         </div>
                      </div>
                   </div>
@@ -309,7 +334,7 @@ img {
         <script>
 // A $( document ).ready() block.
 $( document ).ready(function() {
-
+  new WOW().init();
 
 let i=2;
 
@@ -384,6 +409,11 @@ radius = width/2.5;
     }, 5000);
   
 });
+
+
+
+
+
 console.log( "ready!" );
 });
 
@@ -402,6 +432,44 @@ console.log( "ready!" );
     bottom: -240px;
     transform: rotate(270deg);
     background-repeat: no-repeat;
+}
+img {
+    vertical-align: baseline;
+    border-style: none;
+}
+.itemDot img {
+    display: inline-block;
+
+}
+.dotCircle  .itemDot {
+    padding: 7px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: #ffffff;
+    color: #7d4ac7;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    z-index: 3;
+    cursor: pointer;
+    border: 2px solid #e6e6e6;
+}
+.title-box .title {
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: -1;
+    font-size: 22px;
+}
+.title-box p {
+    font-size: 15px;
+    line-height: 2em;
 }
   </style>
   </body>
